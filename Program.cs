@@ -4,23 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PositivoNegativoCero
+namespace MayorValor
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int num;
-            Console.WriteLine("Ingrese un número");
-            num = Convert.ToInt32(Console.ReadLine());
+            int valor, mayor;
 
-            if (num < 0) { Console.WriteLine("El número es Negativo"); }
-            else
-            {
-                if (num == 0) { Console.WriteLine("El número es Cero"); }
-                else { Console.WriteLine("El número es Positivo"); }
-            }
+            Console.WriteLine("Ingrese el primer número");
+            valor = Convert.ToInt32(Console.ReadLine());
+            mayor = valor;
 
+            Console.WriteLine("Ingrese el segundo número");
+            valor = Convert.ToInt32(Console.ReadLine());
+            if (valor > mayor) mayor = valor;
+
+            Console.WriteLine("Ingrese el tercer número");
+            valor = Convert.ToInt32(Console.ReadLine());
+            if (valor > mayor) mayor = valor;
+
+            Console.WriteLine("Ingrese el cuarto número");
+            valor = Convert.ToInt32(Console.ReadLine());
+            if (valor > mayor) mayor = valor;
+
+            Console.WriteLine("Ingrese el último número");
+            valor = Convert.ToInt32(Console.ReadLine());
+            if (valor > mayor) mayor = valor;
+
+            Console.WriteLine("El número mayor de los 5 es: " + mayor);
             Console.ReadKey();
         }
     }
